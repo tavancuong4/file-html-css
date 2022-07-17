@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" href="image/logo_cuong.jpg"
+    type = "image/x-icon">
+    <title> website Cương điện máy xanh</title>
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://cdn.tgdd.vn/2022/07/banner/1200-44-1200x44-1.png"
+        alt=""
+      />
+    </header>
+    <nav>
+      <div class="container">
+        <ul>
+          <li>
+            <a href=""
+              ><img
+                src="data:image/png;base64,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"
+                alt=""
+            /></a>
+          </li>
+          <li class="list list1 form1">
+            <a href="#">Hà Nội <i class="fa fa-sort-down" style="margin-left:6px;"></i></a>
+            
+
+          </li>
+          <li class="list2"><input ty
+            pe="text" placeholder="tìm kiếm"/> <i class="fa fa-search icon2"></i></li>
+          <li class=" list list3 form2"><a href="#">lịch sử đơn hàng</a>
+          
+          </li>
+          <li class="list list4">
+            <a href="#"><i class="fa fa-shopping-cart" style="margin-right:6px;"></i>giỏ hàng</a></i>
+            
+          </li>
+          <li class="list form5 list5">  
+            <a href=""><span>Phụ kiện</span></a>
+          </li>
+          
+          <li class="list list6"><a href="">Tư vân chọn mua</a></li>
+          <li class="list list7"><a href="">Khuyến mãi</a></li>
+          <div class="form">
+            <div class="form_content">
+              <h3>Chọn địa chỉ nhận hàng  <span class="close">Close</span></h3>
+              <hr>
+              <form action="">
+                
+                <select name="" id="">
+                  <option value="#">Chọn thành phố</option>
+                  <option value="#">Hà Nội</option>
+                  <option value="#">Hồ Chí Minh</option>
+                  <option value="#">Nam Định</option>
+                  <option value="#">Đà Nẵng</option>
+                </select>
+                <select name="" id="">
+                  <option value="#">Chọn quận/huyện</option>
+                  <option value="#">Hà đông</option>
+                  <option value="#">Quận 8</option>
+                  <option value="#">Hải Hậu</option>
+                  <option value="#">Hưng Yên</option>
+                </select>
+                <select name="" id="">
+                  <option value="#">Chọn phường/xã</option>
+                  <option value="#">Yên xá</option>
+                  <option value="#">Kiến Hưng</option>
+                  <option value="#">Hải Đông</option>
+                  <option value="#">Nam Trực</option>
+                </select>
+                <input class="input1" type="text" placeholder="địa chỉ cụ thể">
+                <button>Xác nhận</button>
+              </form>
+            </div>
+          </div>
+          <div class="history">
+            <div class="history_content">
+              <span class="span1">Close</span>
+              <p>Tra cứu thông tin đơn hàng</p>
+              <div class="infor">
+                <i class="fa fa-phone"></i>
+                <input type="text" placeholder="Nhập số điện thoại">
+              </div>
+              <button><a href="">Tiếp tục</a></button>
+            </div>
+          </div>
+          <div class="cart">
+            <div class="container">
+              <i class="fa fa-cart-plus"></i>
+              <button class="home">Về Trang Chủ</button>
+              <p>Khi cần trợ giúp vui lòng gọi <a>1800.1061</a> hoặc <a>028.3948.6789</a>  (trong giờ hành chính)</p>
+            </div>
+          </div>
+        </ul>
+      </div>
+      
+    </nav>
+    <!-- ***************menu1***************** -->
+    <section class="menu1">
+      <div class="container">
+        <div class="content">
+          <ul>
+            <li class="list1_1" ><a href="https://www.dienmayxanh.com/danh-muc-nhom-hang"><i class="fa fa-align-justify"></i>Danh mục</a><span>|</span>
+              <div class="accessory">
+                <ul>
+                  <li><a href="">Tivi </a></li>
+                  <li><a href="">Tủ Lạnh</a></li>
+                  <li><a href="">Máy giặt</a></li>
+                  <li><a href=""> Tủ đông và tủ mát </a></li>
+                  <li><a href="">Điện thoại</a></li>
+                  <li><a href="">Laptop</a></li>
+                  <li><a href="">Điều hòa</a></li>
+                  <li><a href="">Máy lọc nước  </a></li>
+                </ul>
+              </div> 
+            </li>
+            
+            <li class="list1_2"><a href="https://www.dienmayxanh.com/tivi">Tivi</a>
+              <div class="accessory">
+                <ul>
+                  <li><a href="">Tivi Sonny</a></li>
+                  <li><a href="">Tivi SAMSUNG</a></li>
+                  <li><a href="">Tivi LG  </a></li>
+                  <li><a href="">Tivi TLC</a></li>
+                  <li><a href="">Tivi Casper</a></li>
+                  <li><a href="">Tivi AQUA</a></li>
+                  <li><a href="">Tivi Dưới 10 triệu</a></li>
+                </ul>
+              </div> 
+            </li>
+            <li class="list1_3"><a href="https://www.dienmayxanh.com/tu-lanh">Tủ lạnh</a>
+              <div class="accessory">
+                <ul>
+                  <li><a href="">Tủ Lạnh AQUA</a></li>
+                  <li><a href="">Tủ Lạnh Panasonic</a></li>
+                  <li><a href="">Tủ Lạnh TOSHIBA </a></li>
+                  <li><a href="">Tủ Lạnh SHPARP</a></li>
+                  <li><a href="">Tủ Lạnh SAMSUNG</a></li>
+                  <li><a href="">Tủ Lạnh Dưới 6 triệu</a></li>
+                  <li><a href="">Tủ Lạnh Tiết kiệm điện</a></li>
+                </ul>
+              </div> 
+            </li>
+            <li class="list1_4"><a href="https://www.dienmayxanh.com/may-giat">Máy giặt</a>
+              <div class="accessory">
+                <ul>
+                  <li><a href="">Máy giặt TOSHIBA</a></li>
+                  <li><a href="">Máy giặt SAMSUNG</a></li>
+                  <li><a href="">Máy giặt Electrolux</a></li>
+                  <li><a href="">Máy giặt AQUA</a></li>
+                  <li><a href="">Máy giặt LG</a></li>
+                  <li><a href="">Máy giặt dưới 7 triệu</a></li>
+                  <li><a href="">Máy giặt trên 8 triệu</a></li>
+                </ul>
+              </div> 
+            </li>
+            <li class="list1_5"><a href="https://www.dienmayxanh.com/tu-dong">Tủ đông</a>
+              <div class="accessory">
+                <ul>
+                  <li><a href="">Tủ đông SANAKY</a></li>
+                  <li><a href="">Tủ đông KANGAROO</a></li>
+                  <li><a href="">Tủ đông AQUA </a></li>
+                  <li><a href="">Tủ đông Hoà Phát</a></li>
+                  <li><a href="">Tủ đông và mát</a></li>
+                  <li><a href="">Tủ đông SANAKY</a></li>
+                  <li><a href="">Tủ đông dưới 8 triệu</a></li>
+                </ul>
+              </div> 
+            </li>
+            <li class="list1_6"><a href="https://www.dienmayxanh.com/dien-thoai">Điện thoại</a>
+              <div class="accessory">
+                <ul>
+                  <li><a href="">Điện thoại IPHONE</a></li>
+                  <li><a href="">Điện thoại SAMSUNG</a></li>
+                  <li><a href="">Điện thoại OPPO </a></li>
+                  <li><a href="">Điện thoại XIAOMI</a></li>
+                  <li><a href="">Điện thoại VIVO</a></li>
+                  <li><a href="">Điện thoại Realme</a></li>
+                  <li><a href="">Điện thoại NOKIA</a></li>
+                </ul>
+              </div> 
+            </li>
+            <li class="list1_7"><a href="https://www.dienmayxanh.com/laptop-ldp">Laptop</a>
+              <div class="accessory">
+                <ul>
+                  <li><a href="">Laptop Gaming</a></li>
+                  <li><a href="">Laptop MacBook</a></li>
+                  <li><a href="">Laptop Văn phòng</a></li>
+                  <li><a href="">Laptop ACER</a></li>
+                  <li><a href="">Laptop Lenovo</a></li>
+                  <li><a href="">Laptop Dell</a></li>
+                  <li><a href="">Laptop MSI</a></li>
+                </ul>
+              </div> 
+            </li>
+            <li class="list1_8"><a href="https://www.dienmayxanh.com/phu-kien">Phụ kiện</a>
+              <div class="accessory">
+                <ul>
+                  <li><a href="">Sạc dự phòng</a></li>
+                  <li><a href="">Sạc, cáp</a></li>
+                  <li><a href="">Tai nghe </a></li>
+                  <li><a href="">Loa</a></li>
+                  <li><a href="">Thiết bị thông minh</a></li>
+                  <li><a href="">Thiết bị mạng</a></li>
+                  <li><a href="">chuột, bàn phím</a></li>
+                </ul>
+              </div> 
+            </li>
+            <li class="list1_9"><a href="https://www.dienmayxanh.com/quat-dieu-hoa">Điều hòa</a>
+              <div class="accessory">
+                <ul>
+                  <li><a href="">Panasonic Inverter</a></li>
+                  <li><a href="">Điều hòa Daikin Inverter</a></li>
+                  <li><a href="">Điều hòa Casper Inverter</a></li>
+                  <li><a href="">Điều hòa Funiki Inverter</a></li>
+                  <li><a href="">Panasonic Inverter </a></li>
+                  <li><a href="">Điều hòa Sharp Inverter</a></li>
+                  <li><a href="">Toshiba Inverter</a></li>
+                </ul>
+              </div> 
+            </li>
+            <li class="list1_10"><a href="https://www.dienmayxanh.com/may-loc-nuoc-ldp">Máy lọc nước</a>
+              <div class="accessory">
+                <ul>
+                  <li><a href="">Máy lọc nước SUNHOUSE</a></li>
+                  <li><a href="">Máy lọc nước Kangaroo</a></li>
+                  <li><a href="">Máy lọc nước KAROFI </a></li>
+                  <li><a href="">Máy lọc nước Panasonic</a></li>
+                  <li><a href="">Máy lọc nước KroiHome</a></li>
+                  <li><a href="">Máy lọc nước DAIKIOSAN</a></li>
+                  <li><a href="">Máy lọc nước MUTOSI</a></li>
+                </ul>
+              </div> 
+            </li> 
+            
+          </ul>
+        </div>
+      </div>
+      <!-- ************************** -->
+      <div class="menu2">
+        <img src="image/anhto.jpg" alt="">
+      </div>
+      <div class="menu3">
+        <div class="control prev" onclick="prev()">
+          <i class="fa fa-angle-left"></i>
+          <!-- <div class="fa fa-arrow-left" onclick="prev()"></div> -->
+        </div>
+        <div class="tong_iner">
+          <img
+            id="hinh"
+            src="https://cdn.tgdd.vn/2022/07/banner/Desktop-380x200-1-380x200.png"
+            alt=""
+          />
+        </div>
+        <div class="tong_iner">
+          <img
+            id="hinh2"
+            src="https://cdn.tgdd.vn/2022/07/banner/Desktop-380x200-380x200-1.png"
+            alt=""
+          />
+        </div>
+        <div class="tong_iner">
+          <img
+            id="hinh3"
+            src="https://cdn.tgdd.vn/2022/07/banner/Desktop-380x200-2-380x200-1.png"
+            alt=""
+          />
+        </div>
+        <div class="control next" onclick="next()">
+          <i class="fa fa-angle-right"></i>
+        </div>
+      </div>
+      <!-- liner ngang -->
+      <div class="ngang">
+        <img src="image/ngang.jpg" alt="" class="trai left-to-right show-on-scroll">
+        <img src="image/ngang.jpg" alt="" class="phai right-to-left show-on-scroll">
+      </div>
+
+
+<!-- ********************menu4************************ -->
+      <div class="menu4">
+        <a href="https://www.dienmayxanh.com/chi-ban-online" class="sale">
+          <img src="image/demo1.jpg" alt="">
+          <span>Chỉ giảm online</span>
+        </a>
+        <a href="https://www.dienmayxanh.com/dong-gia" class="sale">
+          <img src="image/demo2.jpg" alt="">
+          <span>Đồng giá 99k</span>
+        </a>
+        <a href="https://www.dienmayxanh.com/khuyen-mai-hot" class="sale">
+          <img src="image/demo3.jpg" alt="">
+          <span>Xả hàng giảm xốc</span>
+        </a>
+      </div>
+<!--**************menu5*************** -->
+      <section class="menu5">
+        <div class="container">
+          <img src="image/one.jpg" alt="">
+        </div>
+      </section>
+<!-- ***********menu6************ -->
+    <section class="menu6">
+      <div class="container">
+        <div class="title">
+          <h2>Săn sale quà khủng mỗi ngày</h2>
+        </div>
+        <div class="control prev2" >
+          <i class="fa fa-angle-left"></i>
+        </div>
+        <div class="slider container_slider">
+          <div class="content slider_content">
+            <div class="product">
+                <img src="image/phone9.jpg" alt="" class="img xiaomi1">
+                <div class="item-text">
+                    <li><img src="image/logo.jpg" alt=""><span>Sinh nhật giảm sốc</span></li>
+                    <li>Điện thoại Xiaomi 12 Pro</li>
+                    <li>Online giá rẻ</li>
+                    <li>33.900.000 đ </li>
+                    <li>27.990.000₫<span style="color: red; margin-left: 10px;">- 23%</span></li>
+                    
+                    <li><i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star" style="color: dimgray"></i>
+                    </li>
+                </div>
+            </div>
+            <div class="product">
+              <img src="image/phone8.jpg" alt="" class="img vivo1">
+              <div class="item-text">
+                  <li><img src="image/logo.jpg" alt=""><span>Sinh nhật giảm sốc</span></li>
+                  <li>Vivo X80  </li>
+                  <li>Online giá rẻ</li>
+                  <li>23.999.000 đ</li>
+                  <li>19.990.000₫<span style="color: red; margin-left: 10px;">- 16%</span></li>
+                  <li><i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </li>
+              </div>
+          </div>
+          <div class="product">
+            <img src="image/phone7.jpg" alt="" class="img oppo1">
+            <div class="item-text">
+                <li><img src="image/logo.jpg" alt=""><span>Sinh nhật giảm sốc</span></li>
+                <li>Điện thoại OPPO Find X5 Pro 5G  </li>
+                <li>Online giá rẻ</li>
+                <li>36.890.000 đ</li>
+                <li>30.490.000₫<span style="color: red; margin-left: 10px;">- 20%</span></li>
+                <li><i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </li>
+            </div>
+        </div>
+          <div class="product">
+            <img src="image/phone1.jpg" alt="" class="img iphone1">
+            <div class="item-text">
+                <li><img src="image/logo.jpg" alt=""><span>Sinh nhật giảm sốc</span></li>
+                <li>Iphone 13 pro max 128GB</li>
+                <li>Online giá rẻ</li>
+                <li>33.790.000 đ</li>
+                <li>30.290.000₫<span style="color: red; margin-left: 10px;">- 11%</span></li>
+                <li><i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star" style="color: dimgray"></i>
+                </li>
+            </div>
+        </div>
+        <div class="product">
+          <img src="image/phone6.jpg" alt="" class="img samsung1">
+          <div class="item-text">
+              <li><img src="image/logo.jpg" alt=""><span>Sinh nhật giảm sốc</span></li>
+              <li>Điện thoại Samsung Galaxy Z Flip3 5G 128GB</li>
+              <li>Online giá rẻ</li>
+              <li>24.590.000 đ</li>
+              <li>17.990.000₫ <span style="color: red; margin-left: 10px;">- 33%</span></li>
+              <li><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star" style="color:dimgray ;"></i>
+              </li>
+          </div>
+      </div>
+          </div>
+          <div class="content slider_content">
+            <div class="product">
+                <img src="image/phone7.jpg" alt="" class="img oppo2">
+                <div class="item-text">
+                    <li><img src="image/logo.jpg" alt=""><span>Sinh nhật giảm sốc</span></li>
+                    <li>Điện thoại OPPO Find X5 Pro 5G </li>
+                    <li>Online giá rẻ</li>
+                    <li>25.900.000 đ </li>
+                    <li>22.990.000₫ <span style="color: red; margin-left: 10px;">- 23%</span></li>
+                    
+                    <li><i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star" style="color: dimgray"></i>
+                    </li>
+                </div>
+            </div>
+            <div class="product">
+              <img src="image/phone1.jpg" alt="" class="img iphone2">
+              <div class="item-text">
+                  <li><img src="image/logo.jpg" alt=""><span>Sinh nhật giảm sốc</span></li>
+                  <li>Iphone 13 pro max 128GB</li>
+                  <li>Online giá rẻ</li>
+                  <li>26.999.000 đ</li>
+                  <li>23.890.000₫ <span style="color: red; margin-left: 10px;">- 16%</span></li>
+                  <li><i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </li>
+              </div>
+          </div>
+          <div class="product">
+            <img src="image/phone6.jpg" alt="" class="img samsung2">
+            <div class="item-text">
+                <li><img src="image/logo.jpg" alt=""><span>Sinh nhật giảm sốc</span></li>
+                <li>Điện thoại Samsung Galaxy Z Flip3 5G 128GB </li>
+                <li>Online giá rẻ</li>
+                <li>18.890.000 đ</li>
+                <li>15.900.000₫ <span style="color: red; margin-left: 10px;">- 20%</span></li>
+                <li><i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </li>
+            </div>
+        </div>
+          <div class="product">
+            <img src="image/phone3.jpg" alt="" class="img xiaomi2">
+            <div class="item-text">
+                <li><img src="image/logo.jpg" alt=""><span>Sinh nhật giảm sốc</span></li>
+                <li>Điện thoại Xiaomi 12 Pro</li>
+                <li>Online giá rẻ</li>
+                <li>9.790.000 đ</li>
+                <li>8.990.000₫ <span style="color: red; margin-left: 10px;">- 11%</span></li>
+                <li><i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star" style="color: dimgray"></i>
+                </li>
+            </div>
+        </div>
+        <div class="product">
+          <img src="image/phone8.jpg" alt="" class="img vivo2">
+          <div class="item-text">
+              <li><img src="image/logo.jpg" alt=""><span>Sinh nhật giảm sốc</span></li>
+              <li>Vivo X80 </li>
+              <li>Online giá rẻ</li>
+              <li>16.590.000 đ</li>
+              <li>12.580.000₫ <span style="color: red; margin-left: 10px;">- 33%</span></li>
+              <li><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star" style="color:dimgray ;"></i>
+              </li>
+          </div>
+      </div>
+          </div>
+          <div class="content slider_content">
+            <div class="product">
+                <img src="image/phone1.jpg" alt="" class="img iphone3">
+                <div class="item-text">
+                    <li><img src="image/logo.jpg" alt=""><span>Sinh nhật giảm sốc</span></li>
+                    <li>Iphone 13 pro max 128GB</li>
+                    <li>Online giá rẻ</li>
+                    <li>25.900.000 đ </li>
+                    <li>22.990.000₫ <span style="color: red; margin-left: 10px;">- 23%</span></li>                   
+                    <li><i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star" style="color: dimgray"></i>
+                    </li>
+                </div>
+            </div>
+            <div class="product">
+              <img src="image/phone7.jpg" alt="" class="img oppo3">
+              <div class="item-text">
+                  <li><img src="image/logo.jpg" alt=""><span>Sinh nhật giảm sốc</span></li>
+                  <li>Điện thoại OPPO Find X5 Pro 5G </li>
+                  <li>Online giá rẻ</li>
+                  <li>26.999.000 đ</li>
+                  <li>23.890.000₫<span style="color: red; margin-left: 10px;">- 16%</span></li>
+                  <li><i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </li>
+              </div>
+          </div>
+          <div class="product">
+            <img src="image/phone3.jpg" alt="" class="img xiaomi3">
+            <div class="item-text">
+                <li><img src="image/logo.jpg" alt=""><span>Sinh nhật giảm sốc</span></li>
+                <li>Điện thoại Xiaomi 12 Pro</li>
+                <li>Online giá rẻ</li>
+                <li>18.890.000 đ</li>
+                <li>15.900.000₫ <span style="color: red; margin-left: 10px;">- 20%</span></li>
+                <li><i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </li>
+            </div>
+        </div>
+          <div class="product">
+            <img src="image/phone6.jpg" alt="" class="img samsung3">
+            <div class="item-text">
+                <li><img src="image/logo.jpg" alt=""><span>Sinh nhật giảm sốc</span></li>
+                <li>Điện thoại Samsung Galaxy Z Flip3 5G 128GB</li>
+                <li>Online giá rẻ</li>
+                <li>9.790.000 đ</li>
+                <li>8.990.000₫ <span style="color: red; margin-left: 10px;">- 11%</span></li>
+                <li><i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star" style="color: dimgray"></i>
+                </li>
+            </div>
+        </div>
+        <div class="product">
+          <img src="image/phone8.jpg" alt="" class="img vivo3">
+          <div class="item-text">
+              <li><img src="image/logo.jpg" alt=""><span>Sinh nhật giảm sốc</span></li>
+              <li>Vivo X80 </li>
+              <li>Online giá rẻ</li>
+              <li>16.590.000 đ</li>
+              <li>12.580.000₫ <span style="color: red; margin-left: 10px;">- 33%</span></li>
+              <li><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star" style="color:dimgray ;"></i>
+              </li>
+          </div>
+      </div>
+          </div>
+        </div>
+        <div class="control next2" >
+          <i class="fa fa-angle-right"></i>
+        </div>
+        <button class="new">Click vào mũi để xem sản phẩm khác</button>
+      </div>
+    </section>
+
+<!-- ******************menu7***************** -->
+    <div class="menu7">
+      <li>
+        <div class="product tivi">
+          <div class="product-top">
+            <img
+              src="https://cdn.tgdd.vn/Products/Images/1942/235791/led-4k-samsung-ua50au8100-550x340.jpg"
+              alt=""
+            
+            />
+            <a href="" class="buy">Mua Ngay</a>
+          </div>
+          <div class="product-bottom">
+            <p class="title">Android Tivi Casper 4K 50 inch 50UG6100</p>
+            <p class="sale">Online gia re</p>
+            <p class="price">13.700.000₫ <span> -25%</span></p>
+
+            <p class="vote">
+              <b>4.7</b>
+              <i class="fa fa-star"></i>
+              <span>(151)</span>
+            </p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="product mayloc">
+          <div class="product-top">
+            <img
+              src="https://cdn.tgdd.vn/Products/Images/3385/109835/may-loc-nuoc-hydrogen-kangaroo-vtu-kg100ha-13-300x300.jpg"
+              alt=""
+          
+            />
+            <a href="" class="buy">Mua Ngay</a>
+          </div>
+          <div class="product-bottom">
+            <p class="title">
+              Máy lọc nước R.O Hydrogen Kangaroo VTU KG100HA 9 lõi
+            </p>
+            <p class="sale">Online gia re</p>
+            <p class="price">6.900.000₫ <span> -35%</span></p>
+            <p class="vote">
+              <b>4.5</b>
+              <i class="fa fa-star"></i>
+              <span>(91)</span>
+            </p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="product laptop">
+          <div class="product-top">
+            <img
+              src="https://cdn.tgdd.vn/Products/Images/44/263980/TimerThumb/acer-nitro-5-gaming-an515-45-r6ev-r5-nhqbmsv006-(19).jpg"
+              alt=""
+            
+            />
+            <a href="" class="buy">Mua Ngay</a>
+          </div>
+          <div class="product-bottom">
+            <p class="title">
+              Laptop Acer Nitro 5 Gaming AN515
+      
+            </p>
+            <p class="sale">Online gia re</p>
+            <p class="price">15.700.000₫ <span> -13%</span></p>
+            <p class="vote">
+              <b>4.4</b>
+              <i class="fa fa-star"></i>
+              <span>(51)</span>
+            </p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="product maylanh">
+          <div class="product-top">
+            <img
+              src="https://cdn.tgdd.vn/Products/Images/2002/276988/funiki-inverter-15-hp-hic12tmust3-1.-1-550x160.jpg"
+              alt=""
+        
+            />
+            <a href="" class="buy">Mua Ngay</a>
+          </div>
+          <div class="product-bottom">
+            <p class="title">Máy lạnh Funiki Inverter 1.5 HP </p>
+            <p class="sale">Online gia re</p>
+            <p class="price">9.800.000₫ <span> -20%</span></p>
+            <p class="vote">
+              <b>4.7</b>
+              <i class="fa fa-star"></i>
+              <span>(101)</span>
+            </p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="product quatlanh">
+          <div class="product-top">
+            <img
+              src="https://cdn.tgdd.vn/Products/Images/7498/219138/quat-dieu-hoa-khong-khi-rapido-9000d-219138-300x300.jpg"
+              alt=""
+            
+            />
+            <a href="" class="buy">Mua Ngay</a>
+          </div>
+          <div class="product-bottom">
+            <p class="title">Kangaroo KG50F79N </p>
+            <p class="sale">Online gia re</p>
+            <p class="price">12.500.000₫ <span> -40%</span></p>
+            <p class="vote">
+              <b>4.9</b>
+              <i class="fa fa-star"></i>
+              <span>(25)</span>
+            </p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="product xedap">
+          <div class="product-top">
+            <img
+              src="https://cdn.tgdd.vn/Products/Images/9758/271412/gammax-24-qingyun-30-21s-24-inch-den-do-thumb-600x600.jpg"
+              alt=""
+        
+            />
+            <a href="" class="buy">Mua Ngay</a>
+          </div>
+          <div class="product-bottom">
+            <p class="title">Xe đạp địa hình MTB Exotic 2612 AH 27.5 inch</p>
+            <p class="sale">Online giá rẻ</p>
+            <p class="price">10.600.000₫ <span> -29%</span></p>
+            <p class="vote">
+              <b>4.6</b>
+              <i class="fa fa-star"></i>
+              <span>(81)</span>
+            </p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="product maygiat">
+          <div class="product-top">
+            <img
+              src="https://cdn.tgdd.vn/Products/Images/1944/236123/samsung-ww90tp54dsh-sv-300x300.jpg"
+              alt=""
+        
+            />
+            <a href="" class="buy">Mua Ngay</a>
+          </div>
+          <div class="product-bottom">
+            <p class="title">Máy giặt Aqua Inverter 10 kg </p>
+            <p class="sale">Online giá rẻ</p>
+            <p class="price">11.900.000₫ <span> -23%</span></p>
+            <p class="vote">
+              <b>4.5</b>
+              <i class="fa fa-star"></i>
+              <span>(91)</span>
+            </p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="product tulanh">
+          <div class="product-top">
+            <img
+              src="https://cdn.tgdd.vn/Products/Images/1943/228063/gr-d305mc-9-300x300.jpg"
+              alt=""
+        
+            />
+            <a href="" class="buy">Mua Ngay</a>
+          </div>
+          <div class="product-bottom">
+            <p class="title">Tủ lạnh Aqua Inverter 260 lít  BS</p>
+            <p class="price">8.500.000₫ <span> -19%</span></p>
+            <p class="vote">
+              <b>4.1</b>
+              <i class="fa fa-star"></i>
+              <span>(53)</span>
+            </p>
+          </div>
+        </div>
+      </li>
+    </div>
+    <!--**************** menu8 ************-->
+    <div class="menu8">
+      <h1>CHUỖI MỚI DEAL KHỦNG</h1>
+      <div class="menu8_container">
+        <img src="image/menu8_1.jpg" alt="">
+        <img src="image/menu8_2.jpg" alt="">
+        <img src="image/menu8_3.jpg" alt="">
+      </div>
+    </div>
+
+      <!-- *******************mơi************** -->
+      <div class="service">
+        <div class="title">
+          <h2>DỊCH VỤ TIỆN ÍCH</h2>
+        </div>
+        <div class="list2">
+          <li  class="list2-1" >
+            <div class="icon">
+              <i class="fa fa-cc-visa"></i>
+            </div>
+            <div class="text">
+              <p>Dùng thể visa</p>
+              <small>
+                <strong>Giảm 10%</strong>
+                cho đơn giá 1 triệu trở lên
+              </small>
+            </div>
+          </li>
+          <li class="list2-2">
+            <div class="icon">
+              <i class="fa fa-bolt"></i>
+            </div>
+            <div class="text">
+              <p>Dịch vụ đóng tiền</p>
+              <small>
+                <strong>Giảm 8%</strong>
+                Khi đóng tiền mạng, nước, wifi,...
+              </small>
+            </div>
+          </li>
+          <li class="list2-3">
+            <div class="icon">
+              <i class="fa fa-gamepad"></i>
+            </div>
+            <div class="text">
+              <p>Mua mã thẻ game</p>
+              <small>
+                <strong>Giảm 3%</strong>
+                cho mã thẻ 20k trở lên
+              </small>
+            </div>
+          </li>
+          <li class="list2-4">
+            <div class="icon">
+              <i class="fa fa-mobile"></i>
+            </div>
+            <div class="text">
+              <p>Mua mã thẻ cào</p>
+              <small>
+                <strong>Giảm 5%</strong>
+                cho mệnh giá từ 100k trở lên
+              </small>
+            </div>
+          </li>
+        </div>
+      </div>
+      <div class="cater">
+        <div class="title">
+          <h2>Danh Mục Nổi Bật</h2>
+        </div>
+        <div class="list3">
+          <a href="https://www.dienmayxanh.com/tivi" class="box">
+            <img src="https://cdn.tgdd.vn//content/Tivi-128x129.png" />
+            <span>Tivi</span>
+          </a>
+          <a href="https://www.dienmayxanh.com/tu-lanh" class="box">
+            <img src="https://cdn.tgdd.vn//content/Tulanh-128x129.png" />
+            <span>Tủ lạnh</span>
+          </a>
+          <a href="https://www.dienmayxanh.com/quat" class="box">
+            <img src="https://cdn.tgdd.vn//content/quat-128x129.png" />
+            <span>Quạt</span>
+          </a>
+          <a href="https://www.dienmayxanh.com/noi-chien-khong-dau" class="box">
+            <img src="https://cdn.tgdd.vn//content/noichien-128x129-1.png" />
+            <span>Nồi chiên không <br> dầu</span>
+          </a>
+          <a href="https://www.dienmayxanh.com/may-loc-nuoc" class="box">
+            <img src="https://cdn.tgdd.vn//content/noibat-128x129.png" />
+            <span>Lọc nước</span>
+          </a>
+          <a href="https://www.dienmayxanh.com/may-lanh" class="box maylanh">
+            <img src="https://cdn.tgdd.vn//content/Maylanh-128x129.png" />
+            <span>Máy lạnh</span>
+          </a>
+
+          <a href="https://www.dienmayxanh.com/dung-cu-cam-tay" class="box">
+            <img src="https://cdn.tgdd.vn//content/Dungcu2X-128x129-1.png" />
+            <span>Dụng cụ</span> </a
+          ><a href="https://www.dienmayxanh.com/quat-dieu-hoa" class="box">
+            <img src="https://cdn.tgdd.vn//content/quatdieuhoa-128x129.png" />
+            <span>Quạt điều hòa</span>
+          </a>
+          <a href="https://www.dienmayxanh.com/dien-thoai" class="box">
+            <img src="https://cdn.tgdd.vn//content/dienthoai-128x129-2.png" />
+            <span>Điện thoại</span>
+          </a>
+          <a href="https://www.dienmayxanh.com/laptop-ldp" class="box">
+            <img src="image/laptop1.jpg" />
+            <span>Laptop</span>
+          </a>
+          <a href="https://www.dienmayxanh.com/gia-dung" class="box">
+            <img src="https://cdn.tgdd.vn//content/Diengiadung-128x129.png" />
+            <span>Điện da dụng</span>
+          </a>
+          <a href="https://www.dienmayxanh.com/bep-dien" class="box">
+            <img src="https://cdn.tgdd.vn//content/Bepbeptu-128x129.png" />
+            <span>Bếp từ</span>
+          </a>
+          <a href="https://www.dienmayxanh.com/dong-ho" class="box">
+            <img src="https://cdn.tgdd.vn//content/Dongho-129x129.png" />
+            <span>Đồng hồ</span>
+          </a>
+          <a
+            href="https://www.dienmayxanh.com/may-say-toc?key=m%C3%A1y+s%E1%BA%A5y+t%C3%B3c&sc=new"
+            class="box"
+          >
+            <img src="https://cdn.tgdd.vn//content/Lamdep-128x128-1.png" />
+            <span>Máy sấy</span>
+          </a>
+        </div>
+      </div>
+      <hr />
+
+      <!-- ****************bottom****************** -->
+      <div class="information">
+        <div class="uses">
+          <h4>Các dịch vụ của cửa hàng</h4>
+          <p>Giao hàng, lắp đặt</p>
+          <p>DV vệ sinh máy lạnh, máy giặt, quạt</p>
+          <p>Chính sách bảo hành</p>
+          <p>Tích điểm Quà tặng VIP</p>
+          <p>Hướng dẫn mua online</p>
+        </div>
+        <div class="address">
+          <h4>Địa chỉ các chi nhánh</h4>
+          <p>61 Đ. Lê Văn Lương</p>
+          <p>159 P. Thái Hà</p>
+          <p>260 Đ. Cầu Giấy</p>
+          <p>205 P. Tôn Đức Thắng</p>
+          <p>88 Đ. Trường Chinh</p>
+          <p>501 P. Vũ Tông Phan</p>
+        </div>
+        <div class="phone">
+          <h4>Tổng đài hỗ trợ (Miễn phí gọi)</h4>
+          <p>Gọi mua: <a href="">1023748723</a></p>
+          <p>Kỹ thuật: <a href="">1802395439</a></p>
+          <p>Khiếu lại: <a href="">1893458345</a></p>
+          <p>Bảo hành: <a href="">1800389965</a></p>
+        </div>
+        <div class="more">
+          <div class="top">
+            <h4>Thông tin liên kết</h4>
+            <a href="https://www.facebook.com/dienmayxanhcom">
+              <div class="fa fa-facebook"></div>
+              1435.8k Fan
+            </a>
+            <br />
+            <br />
+            <a href="https://www.youtube.com/user/dienmaycom">
+              <div class="fa fa-youtube"></div>
+              739k Đăng ký
+            </a>
+          </div>
+    
+          <div class="bottom">
+            <h4>Liên kết cùng tập đoàn</h4>
+            <a href="https://www.thegioididong.com/"><img
+              src="data:image/jpeg;base64,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"
+            /></a>
+            <a href="https://www.dienmayxanh.com/"><img
+              src="https://tutimviec.com/wp-content/uploads/2019/04/dienmayxanh-amp.jpg"
+              alt=""
+            /></a>
+            <a href="https://cellphones.com.vn/"><img
+              src="data:image/webp;base64,UklGRh4EAABXRUJQVlA4IBIEAAAwGQCdASqPAI8APpFIn0wlpKKiIsj4sBIJY27hceDm3lrQ9h451fj1M/mT0MOZV9RH7Q/sB7RXq59AD9les29ADy1PY9/bf0n7nZyy/srx22VX4nhxl4OWeCb8y74LU1V1d55XFl/Mv7afqyHjEA9DL+wKhafigFNPTYqvg9/8LkLfFibpC0WQk5jszpz3Fn7wtNfQNVm3GL/pYc9dikH+mGYNKH1ZQbDXCujwBvbphES+maZL6tIiWbeITBl0YGi+NToDopntM9pntM9pntM9pZAA/v1zD/SqllK4R//cwP/9mB//swP+pL3S+sc2AQJ0ZVc4XAI1pxg+9J6nSovRkB9FBtdzysfwirmtJQ48u9prj0uH0u7VqFm79CP6I2b9Q/8h+HFmyoKdmHiCWOW6TFMk0M/1CnA/6cJb3uc/WmmN8fvH35PrAA181q6vmn5/sz0NCDUynrtDu06agFXDxuLRzIYrGQ4ZP9q97mSedmpgaySTNbxs2XxXoJ+5qoTwf2/NpvO3vX8MOtua/PR3jRnenUv0VsWzzpkdEmlBBaKAs9Jv7X66eIHvbpfpSCz5Dbv4vVJBFuQj2Q/MDMx5OZH2cCxmSfBTmqyyraWTOvxQjEXndQ1vG88fVYwPvnowKbhEwFL4zJOprmofp+psORaPWe83Bikby91xBMN63Ny4mJ9iuLrvDTFmoq6Id/iWkI7+FVz/ZOU4Ty1QX/RbvriVlF45vf1YUP27roYtMnX/MPH0U1TY1ijcDbn5dULPZux+i/nnRlYAUSic0AqEvZ06cCcMfcOlH93BIUIlPf9TPem81kt4He15O8I9lfTvGcHhIabQ+8OuGTq3hG0xuAPKablE+handy0ISBeYDMhJtf/9CkodkYe5WKnkhGGxq9yEFn3m6T7V/qISLx8PbcPNy2Zvmrnlm5l9mPRzst5F9+6kbjCcgSC1Tpc+vTbnaaccpf6/J77pg+M7uaHZUYpZFn7NfG8/KBJoL/Y5/l6xjEKTfzPnGQDMR30V0fmgC5oX+YU2k5hPzwE2LkxP2K3/fUEZphQUKRVhIc44jvSjm+EVMxwKvWSkCAPcdQmzLD6dfy4YjyucoYNbCgZKhWlJuikATesuHXxVolovycBH4vHBazT4OYeGt3DVoBKkQ9MV+R5fekRHv5GhZJRoYwnrn2e91g4wqC6tuKw6dm+N4JtwvDQT4X77tJ+TlavVnguhX0V3Xzy5fI9d7hbwsKunB1Ics77w3wNJIEs3u/b/wxxXFDGLBShrAr7n4rRJdVGe5uWQXFRC6FwLajs0DFygWtAej2yYcSfY5ydv+GT1F/Bn59Oi76HNf36gOXsygzZ8HjcvYehZVAPZM1qVxBmFuHoniE6bDGAFCIAAAAAA"
+              alt=""
+            /></a>
+            <a href="https://viettelstore.vn/"> <img
+              src="data:image/png;base64,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"
+              alt=""
+            /></a>
+          
+          </div>
+          
+        </div>
+      </div>
+
+
+      <script src="project.js"></script>
+    </section>
+  </body>
+</html>
+ 
